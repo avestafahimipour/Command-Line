@@ -1,0 +1,6 @@
+tshark -n -r <pcapfile> <basic  filter>
+tshark -n -r <pcapfile> tcp.flags.syn == 1
+tshark -n -r <pcapfile> -T fields -e <fieldnametoextract>
+tshark -n -r <pcapfile> -Y tls -T fields -e x509sat.printableString
+tshark -n -r <pcapfile> -q -z help
+
